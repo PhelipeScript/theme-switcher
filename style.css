@@ -1,0 +1,65 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light);
+    transition: all .4s ease;
+}
+
+.container.dark {
+    background-color: var(--dark);
+    color: #FFF;
+    transition: all .4s ease;
+}
+
+.toggle-switch {
+    position: relative;
+}
+
+.toggle-box {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--label);
+    border-radius: 50px;
+    width: 235px;
+    height: 102px;
+}
+
+.toggle-box::before {
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s ease ;
+}
+
+.container.dark .toggle-box::before{
+    left: 137px;
+    transition: all .4s ease;
+}
